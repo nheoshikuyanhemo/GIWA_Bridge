@@ -9,7 +9,14 @@ cd ~/GIWA_Bridge/giwa-bridging-eth
 ```
 npm install
 ```
-
+### creat .env
+```
+nano .env
+```
+### .env file contents 
+```
+TEST_PRIVATE_KEY=YourPrivateKey
+```
 ### run 
 ```
 npm run dev
