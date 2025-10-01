@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIWA ETH Bridge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GIWA ETH Bridge</h1>
+            <p>Bridge ETH between Ethereum Sepolia and GIWA Sepolia</p>
+        </header>
+
+        <div class="wallet-info">
+            <h3>Wallet Information</h3>
+            <div id="walletAddress">Address: Loading...</div>
+            <div class="balances">
+                <div id="l1Balance">L1 Balance: Loading...</div>
+                <div id="l2Balance">L2 Balance: Loading...</div>
+            </div>
+        </div>
+
+        <div class="bridge-interface">
+            <div class="bridge-card">
+                <h3>Deposit ETH (L1 → L2)</h3>
+                <p class="description">Move ETH from Ethereum Sepolia to GIWA Sepolia</p>
+                <div class="input-group">
+                    <input type="number" id="depositAmount" placeholder="0.0" step="0.001" min="0.001">
+                    <span>ETH</span>
+                </div>
+                <button id="depositBtn" onclick="bridge.depositETH()">Deposit ETH</button>
+                <div id="depositStatus" class="status"></div>
+            </div>
+
+            <div class="bridge-card">
+                <h3>Withdraw ETH (L2 → L1)</h3>
+                <p class="description">Move ETH from GIWA Sepolia back to Ethereum Sepolia</p>
+                <div class="input-group">
+                    <input type="number" id="withdrawAmount" placeholder="0.0" step="0.001" min="0.001">
+                    <span>ETH</span>
+                </div>
+                <button id="withdrawBtn" onclick="bridge.withdrawETH()">Withdraw ETH</button>
+                <div id="withdrawStatus" class="status"></div>
+            </div>
+        </div>
+
+        <div class="transaction-history">
+            <h3>Recent Transactions</h3>
+            <div id="transactionList"></div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Built with ❤️ by <a href="https://x.com/eixaid" target="_blank">0xEixa</a></p>
+                <div class="footer-links">
+                    <a href="https://sepolia.etherscan.io" target="_blank">Ethereum Explorer</a>
+                    <a href="https://sepolia-explorer.giwa.io" target="_blank">GIWA Explorer</a>
+                    <a href="https://x.com/eixaid" target="_blank">Twitter</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
